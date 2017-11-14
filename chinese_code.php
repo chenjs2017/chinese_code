@@ -20,6 +20,7 @@ function my_cool_plugin_create_menu() {
 function register_my_cool_plugin_settings() {
 	//register our settings
 	register_setting( 'my-cool-plugin-settings-group', 'translate_option' );
+	register_setting( 'my-cool-plugin-settings-group', 'product_cat_id' );
 }
 
 function my_cool_plugin_settings_page() {
@@ -34,6 +35,10 @@ function my_cool_plugin_settings_page() {
         <tr valign="top">
         <th scope="row">translate option</th>
         <td><input type="text" name="translate_option" value="<?php echo esc_attr( get_option('translate_option') ); ?>" /></td>
+        </tr>
+        <tr valign="top">
+        <th scope="row">product_cat_id</th>
+        <td><input type="text" name="product_cat_id" value="<?php echo esc_attr( get_option('product_cat_id') ); ?>" /></td>
         </tr>
    </table>
     <?php submit_button(); ?>
